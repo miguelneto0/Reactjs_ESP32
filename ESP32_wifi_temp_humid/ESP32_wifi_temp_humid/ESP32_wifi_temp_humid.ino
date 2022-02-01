@@ -70,7 +70,7 @@ void setup() {
   delay(500);
 
   server.on("/", [](){
-    server.send(200, "cabecalho", "Pagina Inicial\nSERVIDOR ESP32 INICIADO");
+    server.send(200, "cabecalho", "Pagina Inicial\nSERVIDOR ESP32 INICIADO\n");
     delay(500);
   });
  
@@ -78,7 +78,7 @@ void setup() {
     server.send(200, "cabecalho", "LED vermelha acesa");
     digitalWrite(LEDR, HIGH);
     digitalWrite(T2, HIGH);
-    delay(500);
+    delay(2000);
     if(digitalRead(LEDR) == HIGH){
       Serial.println("LED vermelha acesa");
     }
@@ -89,13 +89,13 @@ void setup() {
     server.send(200, "cabecalho", "LED vermelha apagada");
     digitalWrite(LEDR, LOW);
     digitalWrite(T2, LOW);
-    delay(500);
+    delay(2000);
   });
 
   server.on("/ledG/on", [](){
     server.send(200, "cabecalho", "LED verde acesa");
     digitalWrite(LEDG, HIGH);
-    delay(500);
+    delay(2000);
     if(digitalRead(LEDG) == HIGH){
       Serial.println("LED verde acesa");
     }
@@ -105,7 +105,7 @@ void setup() {
   server.on("/ledG/off", [](){
     server.send(200, "cabecalho", "LED verde apagada");
     digitalWrite(LEDG, LOW);
-    delay(500);
+    delay(2000);
   });
   
   server.on("/sensor/temp", [](){
