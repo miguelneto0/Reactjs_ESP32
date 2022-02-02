@@ -14,7 +14,7 @@ Fist of all, the hardware used is listed follow:
 
 The components are conected as shown in the Image 1.
 
-![alt text](https://github.com/miguelneto0/Reactjs_ESP32/blob/main/images/hardware_settings.png?raw=true "Hardware Setting" | width=60)
+![alt text](https://github.com/miguelneto0/Reactjs_ESP32/blob/main/images/hardware_settings.png | width=60)
 
 In the following, the code that implements the WebServer is written in C-like language using Arduino IDE to record the ESP32 board. The code is described in file named **"*esp32_code_temp_humi.ino*"**. For this, were used the following libraries:
 - _"DHT.h"_
