@@ -48,7 +48,7 @@ Finishing the ESP32 programming, the **loop()** function basically executes the 
   
 Now, for implementing the Mobile Application, was used the **React JS** with **Expo** (an open-source platform for building web and mobile apps). In this way, it is needed to install the **Node.js**, from at this point to install **Yarn** and **Expo**, via terminal or cmd prompt, as follow:
 - _<pre><code>npm install -g yarn_</code></pre>
-- <pre><code>_npm install --global expo-cli_</code></pre>
+- <pre><code>npm install --global expo-cli</code></pre>
 
 Thus, after these steps, chose a folder to create the application project, for example, if you create a folder named "mobileApp", you must enter in this folder and run the following command:
   - <code>_expo init mobileApp_</code>
