@@ -44,6 +44,8 @@ In following, the **setup()** and **loop()** are described. First, the setup fun
 
 Finishing the ESP32 programming, the **loop()** function basically executes the function that manages the requests of each client that accesses the server, through the **server.handleClient()** method. In addition, some tests are performed to check the status of the board.
 
+  ## Mobile APP with ReactJS and Expo
+  
 Now, for implementing the Mobile Application, was used the **React JS** with **Expo** (an open-source platform for building web and mobile apps). In this way, it is needed to install the **Node.js**, from at this point to install **Yarn** and **Expo**, via terminal or cmd prompt, as follow:
 - _<pre><code>npm install -g yarn_</code></pre>
 - <pre><code>_npm install --global expo-cli_</code></pre>
