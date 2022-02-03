@@ -16,6 +16,8 @@ Fist of all, the hardware used is listed follow:
 The components are conected as shown in the Image 1:
 
 <img src="https://github.com/miguelneto0/Reactjs_ESP32/blob/main/images/hardware_settings.png"  width="550" height="300">
+<p align = "left">
+Image 1</p>
 
 In the following, the code that implements the WebServer is written in C-like language using Arduino IDE to record the ESP32 board. The code is described in file named **"*esp32_code_temp_humi.ino*"** and is shown in Image 2 below (2.1 left and 2.2 right). For this, were used the following libraries:
 - _"DHT.h"_
@@ -23,6 +25,7 @@ In the following, the code that implements the WebServer is written in C-like la
 - _<WebServer.h>_
 
 <img src="https://github.com/miguelneto0/Reactjs_ESP32/blob/main/images/code_part1.png"  height="280" > <img src="https://github.com/miguelneto0/Reactjs_ESP32/blob/main/images/code_part2.png"  height="280">
+<p align = "left"> Image 2</p> <p align = "right"> Image 3</p>
 
 As observed in Image 2.1 (left), the **"DHT.h"** library is responsible for configuring the temperature and humidity sensor **DHT11** from the statement of the object dht from DHT class. In this statement, the type (**DHT_type**) and the pin (**DHT_pin**) are passed as parameters. In this case, the DHT11 is specifically written (as alterantive DHT22) and the pin choosen was 4. The pin 4 can be statemented for the number of the pin or by the name of the pin (for this NodeMCU board in particular, **T0** represent the **GPIO4** and on the board is marked as **P4 port**).
 
@@ -51,3 +54,11 @@ This command will to open a page with localhost in the 19002 port, that allows w
 <img src="https://github.com/miguelneto0/Reactjs_ESP32/blob/main/images/codeApp_part1.png"  width="540">
 
 As observed, inside of the structure we have a JavaScript file named **App.js**, which is the unique file modified for this project. The first part of the code of App.js shown the libraries imported for this project, such as: **MaterialIcons**, for application icons; **Switch**, for LED buttons; **TouchableOpacity**, for buttons and label of sensed data; **Axios**, for magement of the request and response messages on HTTP protocol; and others. In addition, the interval of lines 8-29 presents the definition of behavior of the red LED from the route identified from the IP of the ESP32, in this case, **192.168.1.29**.
+
+Finally, the remain of the code consist of the all routes statement and the visual application is descried in the return of the App function, which have View tags and Text tags that will to design the mobile application like the Image 5-7 below.
+
+<img src="https://github.com/miguelneto0/Reactjs_ESP32/blob/main/images/codeApp_part2.png"  height="280"> <img src="https://github.com/miguelneto0/Reactjs_ESP32/blob/main/images/codeApp_part3.png"  height="280">
+
+The result of the project is shown in the animation in Image 8:
+
+Enjoy this project.
