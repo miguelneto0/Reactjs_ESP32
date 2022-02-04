@@ -1,5 +1,7 @@
 # Reactjs_ESP32
 
+Home Automation using ESP32 + React JS + DHT11 sensor + WebServer.
+
 This project consists of a Simple Home Automation example, that uses a temperature and humidity sensor with LEDs activated by Mobile APP.
 
 Thus, is presented an implementation of a Web Server using the ESP32 device, which receives requests from a Web/Mobile App and updates the status and data sensed directly in the mobile and web browser. For this, the NodeMCU board model is used and the particular pinout is explained. In addition, the Mobile App is implemented using React Native Framework in JavaScript, which defines the buttons and labels responsible for managing the sensor data collected and the LEDs attached.
@@ -66,9 +68,12 @@ As observed, inside of the structure we have a JavaScript file named **App.js**,
 
 Finally, the remainder of the code consists of the all routes statement and the visual application is described in the return of the App function, which have View tags and Text tags that will to design the mobile application like the Image 5-7 below.
 
-<img src="https://github.com/miguelneto0/Reactjs_ESP32/blob/main/images/codeApp_part2.png"  height="280"> <img src="https://github.com/miguelneto0/Reactjs_ESP32/blob/main/images/codeApp_part3.png"  height="280">
+<img src="https://github.com/miguelneto0/Reactjs_ESP32/blob/main/images/codeApp_part2.png"  height="280"> <img src="https://github.com/miguelneto0/Reactjs_ESP32/blob/main/images/codeApp_part3.png"  height="280"> <img src="https://github.com/miguelneto0/Reactjs_ESP32/blob/main/images/smartphone_print.png"  height="280">
+  
 <p align = "left"><sup>Image 6 and Image 7</sup></p>
 
 The result of the project is shown in the animation in Image 8:
 
+<img src="https://github.com/miguelneto0/Reactjs_ESP32/blob/main/images/gif_test.gif"  height="280">
+  
 Enjoy this project.
