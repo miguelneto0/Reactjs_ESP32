@@ -2,17 +2,22 @@
 #include "WiFi.h"
 #include <WebServer.h>
 
-#define DHT_type DHT11                      // DHT11
-#define DHT_pin  4                          // GPIO4 ou T0
-                                            // GPIO2 ou T2
-                                            // GPIO22 LED_BUILTIN
-#define WIFI_timeout 10000                  // tempo total de espera para conectar WiFi
+#define DHT_type DHT11              // DHT11
+#define DHT_pin  4                  // GPIO4 ou T0
+                                    // GPIO2 ou T2
+                                    // GPIO22 LED_BUILTIN
+#define WIFI_timeout 10000          // tempo total de espera para conectar WiFi
+DHT dht(DHT_pin, DHT_type);         // variavel para leitura pelo DHT11
+WebServer server(80);               // variavel que gerencia o servidor web
 
-const char* ssid = "COMMON-Cilene";         // nome da rede
-const char* pswd = "cilene12";              // senha da rede
+float temp, humi;                   // variaveis para os dados de temperatura e umidade
+String valor = "";                  // string que manipulara os dados lidos
 
-//unsigned long tempoUltimaLeitura = millis();// tempo lido
-//const long espera = 2000;                   // tempo de espera para a leitura 
+#define LEDR 26                     // GPIO 26 (P26) para a LED vermelha
+#define LEDG 27                     // GPIO 27 (P27) para a LED verde
+
+const char* ssid = "COMMON-Cilene"; // nome da rede
+const char* pswd = "cilene12";      // senha da rede
 
 // Funcao que conecta o ESP32 na rede
 void conectar(){
@@ -39,15 +44,6 @@ void conectar(){
     Serial.println(WiFi.localIP());
   }
 }
-
-DHT dht(DHT_pin, DHT_type);             // variavel para leitura pelo DHT11
-WebServer server(80);                   // variavel que gerencia o servidor web
-
-float temp, humi;                       // variaveis para os dados de temperatura e umidade
-String valor = "";                      // string que manipulara os dados lidos
-
-#define LEDR 26                         // GPIO 26 (P26) para a LED vermelha
-#define LEDG 27                         // GPIO 27 (P27) para a LED verde
 
 void setup() {
   pinMode(T2, OUTPUT);                  // configura LED_BUILTIN do ESP32
@@ -144,7 +140,8 @@ void loop() {
     digitalWrite(LEDG, LOW);
   }
 
-  // testes para verificar os dados pelo Monitor Serial da plataforma Arduino IDE
+  // testes para verificar os dados pelo 
+  // Monitor Serial da plataforma Arduino IDE
   Serial.println(digitalRead(LEDR));
   Serial.println(digitalRead(LEDG));
   Serial.print("Temperatura = ");
